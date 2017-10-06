@@ -2,9 +2,9 @@ keyboard {
   display: table;
   width: 100%;
   text-align: center;
-  color: $text;
   border: 1px solid $borderBlue;
   font-size: 1.5em;
+  color: $text;
 
   .row {
     width: 100%;
