@@ -22,7 +22,7 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-
+$fontSize: 16;
 
 
 // Named Color Variables
@@ -32,6 +32,7 @@ $lightBlue: #34495C;
 $normalBlue: #2A3A4A;
 $darkBlue: #222E3C;
 $borderBlue: #3D4D5D;
+$text: #F6F9FC;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -52,6 +53,14 @@ $borderBlue: #3D4D5D;
 // Windows only Sass variables can go here
 
 
+// Functions
+// --------------------------------------------------
+@function toRem($val){
+  @return ($val / $fontSize * 1.6) + 0rem;
+}
+@function toEm($val){
+  @return ($val / $fontSize * 1.6) + 0em;
+}
 
 
 // App Theme

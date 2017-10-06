@@ -2,15 +2,35 @@ keyboard {
   display: table;
   width: 100%;
   text-align: center;
+  color: $text;
+  border: 1px solid $borderBlue;
+  font-size: 1.5em;
 
   .row {
     width: 100%;
     display: table-row;
+    border-bottom: 1px solid $borderBlue;
 
     .cell {
       display: table-cell;
       width: 33.33%;
       vertical-align: middle;
+      background-color: $normalBlue;
+      border-right: 1px solid $borderBlue;
+      border-bottom: 1px solid $borderBlue;
+      padding: 25px;
+
+      &:active {
+        background-color: $darkBlue;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &:last-child .cell {
+      border-bottom: none;
     }
   }
 }
