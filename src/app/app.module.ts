@@ -7,10 +7,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { PhoneNumberComponent } from '../components/phone-number/phone-number';
+import { DialHangupComponent } from '../components/dial-hangup/dial-hangup';
+import { KeyboardComponent } from '../components/keyboard/keyboard';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    PhoneNumberComponent,
+    DialHangupComponent,
+    KeyboardComponent
   ],
   imports: [
     BrowserModule,
