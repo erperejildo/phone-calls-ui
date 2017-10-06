@@ -1,3 +1,17 @@
 dial-hangup {
+  background-color: $lightBlue;
+  display: block;
+  align-items: center;
 
+  button {
+    width: toRem(122);
+    height: toRem(35);
+    font-size: 1em;
+    color: $text;
+    @include border-radius(toRem(5));
+
+    &.dial {
+      background-color: $green;
+    }
+  }
 }

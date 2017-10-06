@@ -1,9 +1,6 @@
 phone-number {
   font-size: 2.5em;
-  text-align: center;
-  width: 100%;
   background-color: $darkBlue;
   color: $text;
-  padding: toRem(40) 0;
-  display: block;
+  align-items: center;
 }
