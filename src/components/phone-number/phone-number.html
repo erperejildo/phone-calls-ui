@@ -1,4 +1,4 @@
 <div>
-    <div class="time" [hidden]="!callsListProvider.calling">Call time 00:00:12</div>
+    <div class="time" [hidden]="!callsListProvider.calling">Call time 00:00:<span [hidden]="callsListProvider.timeCounter > 9">0</span>{{callsListProvider.timeCounter}}</div>
     <div>{{callsListProvider.number}}</div>
 </div>

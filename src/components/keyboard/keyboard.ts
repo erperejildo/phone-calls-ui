@@ -11,7 +11,6 @@ export class KeyboardComponent {
   }
 
   addNumber(number) {
-    console.log(number);
     this.callsListProvider.number = this.callsListProvider.number + number.target.innerText;
   }
 

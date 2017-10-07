@@ -8,7 +8,6 @@ import { CallsListProvider } from '../../providers/calls-list/calls-list';
 export class HomePage {
 
   constructor(public callsListProvider: CallsListProvider) {
-
   }
 
 }
