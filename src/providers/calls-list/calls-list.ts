@@ -3,7 +3,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CallsListProvider {
-  prueba: string = 'hoollla';
+  number: string = '';
+  calling: boolean;
 
   constructor() {
     console.log('Hello CallsListProvider Provider');

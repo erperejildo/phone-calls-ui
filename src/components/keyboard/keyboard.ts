@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CallsListProvider } from '../../providers/calls-list/calls-list';
 
 @Component({
   selector: 'keyboard',
@@ -6,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class KeyboardComponent {
 
-  constructor() {
+  constructor(public callsListProvider: CallsListProvider) {
+  }
+
+  addNumber(number) {
+    console.log(number);
+    this.callsListProvider.number = this.callsListProvider.number + number.target.innerText;
   }
 
 }

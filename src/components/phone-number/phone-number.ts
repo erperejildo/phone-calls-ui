@@ -7,12 +7,8 @@ import { CallsListProvider } from '../../providers/calls-list/calls-list';
 })
 export class PhoneNumberComponent {
 
-  text: string;
-
   constructor(public callsListProvider: CallsListProvider) {
     console.log(callsListProvider);
-    console.log('Hello PhoneNumberComponent Component');
-    this.text = 'Hello World';
   }
 
 }
