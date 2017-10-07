@@ -18,6 +18,13 @@
 body {
   line-height: 1.4;
   font-size: $fontSize + px;
+
+  .toolbar-background {
+    background-color: $darkBlue;
+  }
+  .toolbar-title-ios {
+    color: $text;
+  }
 }
 
 .flex-wrapper {

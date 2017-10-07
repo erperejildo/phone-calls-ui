@@ -8,4 +8,11 @@ phone-number {
     font-size: 0.5em;
     color: $time;
   }
+
+  ion-icon {
+    position: absolute;
+    top: 0;
+    left: toRem(10);
+    color: $text;
+  }
 }

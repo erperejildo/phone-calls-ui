@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CallsListProvider {
@@ -7,6 +6,7 @@ export class CallsListProvider {
   calling: boolean;
   timeCounter: number;
   timeInterval: any;
+  list: any = [];
 
   constructor() {
   }
@@ -24,10 +24,18 @@ export class CallsListProvider {
   }
 
   hangup() {
+    this.addCallToList();
     this.calling = false;
     this.number = '';
-
     clearInterval(this.timeInterval);
+  }
+
+  addCallToList() {
+    if (typeof(this.list[this.number]) === 'undefined') {
+      this.list[this.number] = 0;
+    } else {
+      this.list[this.number] = this.list[this.number] + 1;
+    }
   }
 
 }

@@ -1,4 +1,6 @@
 <div>
+    <ion-icon name="menu" menuToggle [hidden]="callsListProvider.calling"></ion-icon>
+
     <div class="time" [hidden]="!callsListProvider.calling">Call time 00:00:<span [hidden]="callsListProvider.timeCounter > 9">0</span>{{callsListProvider.timeCounter}}</div>
     <div>{{callsListProvider.number}}</div>
 </div>
