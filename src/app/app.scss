@@ -25,6 +25,10 @@ body {
   .toolbar-title-ios {
     color: $text;
   }
+  .scroll-content {
+    background-color: $lightBlue;
+    color: $text;
+  }
 }
 
 .flex-wrapper {

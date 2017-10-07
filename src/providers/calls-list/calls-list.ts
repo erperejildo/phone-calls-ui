@@ -28,13 +28,16 @@ export class CallsListProvider {
     this.calling = false;
     this.number = '';
     clearInterval(this.timeInterval);
+    console.log(this.list);
   }
 
   addCallToList() {
-    if (typeof(this.list[this.number]) === 'undefined') {
-      this.list[this.number] = 0;
+    const pos = '.' + this.number; // avoid arrays large as a mobile number but keeping the number
+
+    if (typeof(this.list[pos]) === 'undefined') {
+      this.list[pos] = 1;
     } else {
-      this.list[this.number] = this.list[this.number] + 1;
+      this.list[pos] = this.list[pos] + 1;
     }
   }
 

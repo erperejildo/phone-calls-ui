@@ -10,7 +10,8 @@ keyboard {
     width: 100%;
     height: 100%;
     background-color: $normalBlue;
-    border: toRem(1) solid $borderBlue;
+    border: toRem(2) solid $borderBlue;
+    border-top: none;
 
     .row {
       display: table-row;
@@ -19,8 +20,8 @@ keyboard {
       .cell {
         display: table-cell;
         vertical-align: middle;
-        border-bottom: toRem(1) solid $borderBlue;
-        border-right: toRem(1) solid $borderBlue;
+        border-bottom: toRem(2) solid $borderBlue;
+        border-right: toRem(2) solid $borderBlue;
 
         &:last-child {
           border-right: none;
@@ -29,6 +30,10 @@ keyboard {
         &:active {
           background-color: $darkBlue;
         }
+      }
+
+      &:last-child .cell {
+        border-bottom: none;
       }
     }
   }
