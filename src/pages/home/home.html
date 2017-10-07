@@ -2,6 +2,6 @@
 
   <phone-number class="flex-row"></phone-number>
   <keyboard class="flex-row"></keyboard>
-  <dial-hangup class="flex-row"></dial-hangup>
+  <dial-hangup class="flex-row" [ngClass]="{'calling':callsListProvider.calling}"></dial-hangup>
 
 </ion-content>

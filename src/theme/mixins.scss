@@ -5,3 +5,11 @@
   -ms-border-radius: $val1 $val2 $val3 $val4;
   -o-border-radius: $val1 $val2 $val3 $val4;
 }
+
+@mixin transition-duration($val) {
+  transition-duration: $val;
+  -webkit-transition-duration: $val;
+  -moz-transition-duration: $val;
+  -ms-transition-duration: $val;
+  -o-transition-duration: $val;
+}

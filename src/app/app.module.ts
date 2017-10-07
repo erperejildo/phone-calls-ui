@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { PhoneNumberComponent } from '../components/phone-number/phone-number';
 import { DialHangupComponent } from '../components/dial-hangup/dial-hangup';
 import { KeyboardComponent } from '../components/keyboard/keyboard';
+import { CallsListProvider } from '../providers/calls-list/calls-list';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { KeyboardComponent } from '../components/keyboard/keyboard';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CallsListProvider
   ]
 })
 export class AppModule {}

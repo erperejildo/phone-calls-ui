@@ -2,16 +2,35 @@ dial-hangup {
   background-color: $lightBlue;
   display: block;
   align-items: center;
+  @include transition-duration(0.5s);
+  position: absolute;
+  bottom: 0;
 
   button {
-    width: toRem(122);
-    height: toRem(35);
-    font-size: 1em;
     color: $text;
+    cursor: pointer;
     @include border-radius(toRem(5));
 
     &.dial {
       background-color: $green;
     }
+    &.hangup {
+      background-color: $red;
+    }
+
+    &.fixed-size {
+      width: toRem(122);
+      height: toRem(35);
+      font-size: 1em;
+    }
+
+    &:not(.fixed-size) {
+      font-size: 1.5em;
+      padding: toRem(20) toRem(80);
+    }
+  }
+
+  &.calling {
+    height: 75%;
   }
 }
