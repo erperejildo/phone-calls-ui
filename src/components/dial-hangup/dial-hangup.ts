@@ -13,11 +13,9 @@ export class DialHangupComponent {
 
   dial() {
     this.callsListProvider.calling = true;
-    this.elRef.nativeElement.classList.add('calling');
   }
 
   hangup() {
     this.callsListProvider.calling = false;
-    this.elRef.nativeElement.classList.remove('calling');
   }
 }

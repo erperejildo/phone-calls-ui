@@ -1,2 +1,2 @@
-<button class="dial fixed-size" (click)="dial()" [hidden]="calling">Dial</button>
-<button class="hangup fixed-size" (click)="hangup()" [hidden]="!calling">Hangup</button>
+<button class="dial fixed-size" (click)="dial()" [hidden]="callsListProvider.calling">Dial</button>
+<button class="hangup fixed-size" (click)="hangup()" [hidden]="!callsListProvider.calling">Hangup</button>
