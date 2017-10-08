@@ -12,7 +12,9 @@ export class DialHangupComponent {
   }
 
   dial() {
-    this.callsListProvider.dial();
+    if (this.callsListProvider.number.length > 0) {
+      this.callsListProvider.dial();
+    }
   }
 
   hangup() {

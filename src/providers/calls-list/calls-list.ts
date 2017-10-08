@@ -6,6 +6,7 @@ export class CallsListProvider {
   calling: boolean;
   timeCounter: number;
   timeInterval: any;
+  tempList: any = [];
   list: any = [];
 
   constructor() {
@@ -28,16 +29,27 @@ export class CallsListProvider {
     this.calling = false;
     this.number = '';
     clearInterval(this.timeInterval);
-    console.log(this.list);
   }
 
   addCallToList() {
-    const pos = '.' + this.number; // avoid arrays large as a mobile number but keeping the number
+    // avoids arrays large as a mobile number but keeping the number for indexing
+    const pos = '.' + this.number;
 
-    if (typeof(this.list[pos]) === 'undefined') {
-      this.list[pos] = 1;
+    // checks if we already have the number to increment the calls
+    if (typeof(this.tempList[pos]) === 'undefined') {
+      this.tempList[pos] = 1;
     } else {
-      this.list[pos] = this.list[pos] + 1;
+      this.tempList[pos] = this.tempList[pos] + 1;
+    }
+
+    // prepares the list on an array of objects for an easier reading for Angular
+    this.list = [];
+    for (let prop in this.tempList) {
+      console.log(prop + ': ' + this.tempList[prop]);
+      this.list.push({
+        number: prop.replace('.', ''),
+        totalCalls: this.tempList[prop]
+      });
     }
   }
 

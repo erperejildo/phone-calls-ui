@@ -5,8 +5,8 @@
         </ion-toolbar>
     </ion-header>
 
-    <ion-content padding>-{{callsListProvider.list}}-
-        <div *ngFor="let a of callsListProvider.list">{{a}}</div>
+    <ion-content padding>
+        <div *ngFor="let call of callsListProvider.list">{{call.number}}</div>
     </ion-content>
 
 </ion-menu>
