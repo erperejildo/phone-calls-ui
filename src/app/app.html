@@ -8,8 +8,9 @@
     <ion-content padding>
         <span [hidden]="callsListProvider.list.length > 0">You haven't called anyone yet</span>
         <div [hidden]="callsListProvider.list.length === 0">
-            <div>Total number of calls: {{callsListProvider.list.length}}</div>
-            <div>
+            <div>Total number of phone numbers called: {{callsListProvider.list.length}}</div>
+            <div>Total number of calls: {{callsListProvider.totalCalls}}</div>
+            <div class="important-calls">
                 Most called phone numbers:
                 <ul *ngFor="let call of callsListProvider.list | orderByNumber:totalCalls">
                     <li>{{call.number}} ({{call.totalCalls}})</li>

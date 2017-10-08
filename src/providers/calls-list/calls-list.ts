@@ -6,6 +6,7 @@ export class CallsListProvider {
   calling: boolean;
   timeCounter: number;
   timeInterval: any;
+  totalCalls: number = 0;
   tempList: any = [];
   list: any = [];
 
@@ -14,7 +15,7 @@ export class CallsListProvider {
 
   dial() {
     this.calling = true;
-
+    this.totalCalls = this.totalCalls + 1;
     this.timeCounter = 0;
     this.timeInterval = setInterval(() => {
       this.timeCounter++;
