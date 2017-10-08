@@ -20,6 +20,8 @@ $ ionic cordova run android
 ```
 ios is also available (but not tested).
 
+You can also test it directly on your phone using [Legacy Ionic View](https://play.google.com/store/apps/details?id=com.ionic.viewapp&hl=en_GB) and adding the ID 5596f201
+
 ### Techs used
 - Angular 4 (ES6 and JS)
 - Ionic 3: basically for mobile testing purposes (Cordova)
