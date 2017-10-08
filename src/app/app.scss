@@ -20,6 +20,9 @@ body {
   font-size: $fontSize + px;
 
   // overwriting ionic classes
+  .scroll-content {
+    overflow-y: auto;
+  }
   .app-root {
     background-color: $background;
   }
