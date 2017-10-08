@@ -2,5 +2,7 @@
   "name": "phone-calls-ui",
   "app_id": "5596f201",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

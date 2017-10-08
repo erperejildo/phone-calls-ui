@@ -1,26 +1,33 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## Phone Calls UI
 
-## How to use this template
+Demo app which emulates a mobile UI with a calling system and a list of phone calls.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Run it
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+To run the app locally just clone the repo and run these commands on your terminal:
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ npm install -g ionic cordova
+$ cd phone-calls-ui
+$ npm install
+$ ionic serve
 ```
 
-Then, to run it, cd into `myBlank` and run:
-
+If you want to test on your phone just run:
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ ionic cordova platform add android
+$ ionic cordova run android
 ```
+ios is also available (but not tested).
 
-Substitute ios for android if not on a Mac.
+### Techs used
+- Angular 4 (ES6 and JS)
+- Ionic 3: basically for mobile testing purposes (Cordova)
+- CSS3 (Sass, animations)
 
+### Things that I would change
+
+There are some things that I would change on a real project like:
+- There is no cancel button: when you start to type the number you need to dial and hangup to start over
+- Real time: right now it ony accepts seconds
+- Bigger dial/hangup button: In my opinion, a fixed size for that button is not the best approach. I have created a class which removes those sizes. It can be tested removing the class 'fixed-size' on those buttons (dial-hangup.html)
