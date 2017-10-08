@@ -6,7 +6,16 @@
     </ion-header>
 
     <ion-content padding>
-        <div *ngFor="let call of callsListProvider.list">{{call.number}}</div>
+        <span [hidden]="callsListProvider.list.length > 0">You haven't called anyone yet</span>
+        <div [hidden]="callsListProvider.list.length === 0">
+            <div>Total number of calls: {{callsListProvider.list.length}}</div>
+            <div>
+                Most called phone numbers:
+                <ul *ngFor="let call of callsListProvider.list">
+                    <li>{{call.number}} ({{call.totalCalls}})</li>
+                </ul>
+            </div>
+        </div>
     </ion-content>
 
 </ion-menu>
