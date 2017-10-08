@@ -19,10 +19,14 @@ body {
   line-height: 1.4;
   font-size: $fontSize + px;
 
+  // overwriting ionic classes
+  .app-root {
+    background-color: $background;
+  }
   .toolbar-background {
     background-color: $darkBlue;
   }
-  .toolbar-title-ios {
+  .toolbar-title-ios, .toolbar-title-md {
     color: $text;
   }
   .scroll-content {
@@ -30,6 +34,14 @@ body {
     color: $text;
     font-size: 1.2em;
   }
+}
+
+.container {
+  max-width: 500px;
+  height: 100%;
+  display: block;
+  position: relative;
+  margin: auto;
 }
 
 .important-calls {
