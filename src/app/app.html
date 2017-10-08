@@ -11,7 +11,7 @@
             <div>Total number of calls: {{callsListProvider.list.length}}</div>
             <div>
                 Most called phone numbers:
-                <ul *ngFor="let call of callsListProvider.list">
+                <ul *ngFor="let call of callsListProvider.list | orderByNumber:totalCalls">
                     <li>{{call.number}} ({{call.totalCalls}})</li>
                 </ul>
             </div>

@@ -45,7 +45,6 @@ export class CallsListProvider {
     // prepares the list on an array of objects for an easier reading for Angular
     this.list = [];
     for (let prop in this.tempList) {
-      console.log(prop + ': ' + this.tempList[prop]);
       this.list.push({
         number: prop.replace('.', ''),
         totalCalls: this.tempList[prop]

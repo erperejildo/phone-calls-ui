@@ -10,7 +10,10 @@ import { HomePage } from '../pages/home/home';
 import { PhoneNumberComponent } from '../components/phone-number/phone-number';
 import { DialHangupComponent } from '../components/dial-hangup/dial-hangup';
 import { KeyboardComponent } from '../components/keyboard/keyboard';
+
 import { CallsListProvider } from '../providers/calls-list/calls-list';
+
+import { OrderByNumberPipe } from '../pipes/order-by-number/order-by-number';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { CallsListProvider } from '../providers/calls-list/calls-list';
     HomePage,
     PhoneNumberComponent,
     DialHangupComponent,
-    KeyboardComponent
+    KeyboardComponent,
+    OrderByNumberPipe
   ],
   imports: [
     BrowserModule,
