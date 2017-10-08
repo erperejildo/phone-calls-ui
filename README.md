@@ -27,6 +27,13 @@ You can also test it directly on your phone using [Legacy Ionic View](https://pl
 - Ionic 3: basically for mobile testing purposes (Cordova)
 - CSS3 (Sass, animations)
 
+### Structure
+The app is a single page with 3 components (phone-number, keyboard and dial-hangup). It also has a service (provider) with shared functions and objects.
+
+Has a left hidden menu with some information about the list of the phone calls. It uses a pipe/filter in order to display the info that we want on the client.
+
+I decided to not use [BEM](http://getbem.com/introduction/) on the CSS because with just 3 small components the naming convention is quite simple and no complex names are required.
+
 ### Things that I would change
 
 There are some things that I would change on a real project like:
